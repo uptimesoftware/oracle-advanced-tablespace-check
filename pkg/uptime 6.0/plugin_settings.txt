@@ -1,0 +1,8 @@
+name=Oracle Advanced Tablespace Monitor
+version=2.0
+platforms=windows linux solaris
+description=Allows for better monitoring of auto-extendable Oracle tablespaces.
+restartCore=true
+requiresAgentScript=false
+onUpgradeRemoveFiles=true
+onUpgradeRemoveMonitors=false

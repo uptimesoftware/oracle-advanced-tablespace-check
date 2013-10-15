@@ -1,0 +1,8 @@
+name=Oracle Advanced Tablespace Check
+version=3.0
+platforms=windows linux
+description=Monitor Oracle tablespaces. This monitor will show you available, used and free space of each tablespace as well as percent used.
+restartCore=false
+requiresAgentScript=true
+onUpgradeRemoveFiles=true
+onUpgradeRemoveMonitors=false

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.uptimesoftware.com/erdc/erdc erdc"
+	xmlns="http://www.uptimesoftware.com/erdc/erdc"
+	xmlns:upt="http://www.uptimesoftware.com/erdc/erdc" version="4.0" target_grouping="other">
+	<class>Oracle Advanced Tablespace Check</class>
+	<exec>com.uptimesoftware.uptime.erdc.MonitorCustomScriptRunner</exec>
+	<elements>
+		<element name="process" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+			<control_options> size:40 </control_options>
+			<default_value>scripts/MonitorOracleTablespaceCheck/oracle_tablespace_check.bat</default_value>
+			<short_description>Script Name</short_description>
+			<long_description>Name of the script/binary/process to be executed by up.time </long_description>
+			<validation_rule>
+				<alphanumeric/>
+			</validation_rule>
+			<error_message>
+				<alphanumeric>required field</alphanumeric>
+			</error_message>
+			<gui_type>
+				<string/>
+			</gui_type>
+		</element>
+		<element name="servicename" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+            <control_options>width:40em</control_options> 
+            <default_value>ORCL</default_value>
+            <short_description>Oracle Service_Name</short_description> 
+            <long_description>Name of database to connect to</long_description> 
+            <validation_rule/> 
+            <error_message/> 
+            <gui_type>
+                <string/> 
+            </gui_type>
+        </element>
+		<element name="username" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+            <control_options>width:40em</control_options> 
+            <default_value/>
+            <short_description>Oracle Username</short_description> 
+            <long_description>Enter a userid with read access to sys.database, sys.dba_data_files and sys.dba_temp_files</long_description> 
+            <validation_rule/> 
+            <error_message/> 
+            <gui_type>
+                <string/> 
+            </gui_type>
+        </element>
+		<element name="password" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+			<control_options> size:40 </control_options>
+			<default_value/>
+			<short_description> Oracle User Password </short_description>
+			<long_description> Oracle User Password </long_description>
+			<validation_rule>
+				<alphanumeric/>
+			</validation_rule>
+			<error_message>
+				<alphanumeric>required field</alphanumeric>
+			</error_message>
+			<gui_type>
+				<password/>
+			</gui_type>
+		</element>
+		<element name="available" parameter_type="output" data_type="ranged" gui_basic="1"
+			range_type="0" units="KB">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>Available Space</short_description>
+			<long_description>Available Space</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<integer/>
+			</gui_type>
+		</element>
+		<element name="used" parameter_type="output" data_type="ranged" gui_basic="1"
+			range_type="0" units="KB">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>Used Space</short_description>
+			<long_description>Used Space</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<decimal/>
+			</gui_type>
+		</element>
+		<element name="free" parameter_type="output" data_type="ranged" gui_basic="1"
+			range_type="0" units="KB">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>Free Space</short_description>
+			<long_description>Free Space</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<decimal/>
+			</gui_type>
+		</element>
+		<element name="percent" parameter_type="output" data_type="ranged" gui_basic="1"
+			range_type="0" units="pct">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>Percent Free</short_description>
+			<long_description>Percent Free</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<decimal/>
+			</gui_type>
+		</element>
+	</elements>
+	<help>When running a custom script check, note that the second parameter is always the name of the assigned host.
+	The script that's executed should output each variable on it's own line, otherwise up.time won't be able to capture the appropriate information.</help>
+</uptime>
