@@ -7,17 +7,17 @@ See http://uptimesoftware.github.io for more information.
 
 ### Category
 
-{ page.category }}
+database
 
 ### Version Compatibility
 
 
   
-    * Oracle Advanced Tablespace Check 3.0 - 7.1, 7.0
+* Oracle Advanced Tablespace Check 3.0 - 7.1, 7.0
   
 
   
-    * Oracle Advanced Tablespace Check 2.0 - 6.0
+* Oracle Advanced Tablespace Check 2.0 - 6.0
   
 
 
@@ -95,12 +95,27 @@ None; no agent required
 
 
 ### Input Variables
-* Username; username to be used to connect to the HMC* Password (Windows only); password to be used to connect to the HMC
+
+* Username; username to be used to connect to the HMC
+
+* Password (Windows only); password to be used to connect to the HMC
+
 
 ### Output Variables
 
-* Chassis CPU Utilization (%)* Chassis CPU Utilization (CPU unit)* LPAR CPU Utilization (%)* LPAR CPU Utilization (CPU unit)* Response Time (ms)
+
+* Chassis CPU Utilization (%)
+
+* Chassis CPU Utilization (CPU unit)
+
+* LPAR CPU Utilization (%)
+
+* LPAR CPU Utilization (CPU unit)
+
+* Response Time (ms)
+
 
 ### Languages Used
+
 * PHP
 
