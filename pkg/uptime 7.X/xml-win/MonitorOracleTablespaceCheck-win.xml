@@ -21,11 +21,33 @@
 				<string/>
 			</gui_type>
 		</element>
-		<element name="servicename" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+		<element name="odbc_driver" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
             <control_options>width:40em</control_options> 
-            <default_value>ORCL</default_value>
-            <short_description>Oracle Service_Name</short_description> 
-            <long_description>Name of database to connect to</long_description> 
+            <default_value>{Oracle in instantclient_12_1}</default_value>
+            <short_description>ODBC Driver Name</short_description> 
+            <long_description>Path for ODBC Driver</long_description> 
+            <validation_rule/> 
+            <error_message/> 
+            <gui_type>
+                <string/> 
+            </gui_type>
+        </element>
+		<element name="db_port" parameter_type="input" data_type="integer" gui_basic="1" range_type="0">
+            <control_options>width:40em</control_options> 
+            <default_value>1521</default_value>
+            <short_description>Oracle DB Port</short_description> 
+            <long_description>Oracle Database Port</long_description> 
+            <validation_rule/> 
+            <error_message/> 
+            <gui_type>
+                <string/> 
+            </gui_type>
+        </element>
+		<element name="db_name" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+            <control_options>width:40em</control_options> 
+            <default_value>orcl</default_value>
+            <short_description>Oracle DB Name</short_description> 
+            <long_description>Oracle Database Name</long_description> 
             <validation_rule/> 
             <error_message/> 
             <gui_type>
