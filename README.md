@@ -56,7 +56,9 @@ Windows
 
 5. Run the 'Data Sources (ODBC)' utility from the Windows 'Administrative Tools'. Click on the 'Drivers' tab, and confirm that you have an  'Oracle in instantclient' driver listed, and note the name of the driver, as this is required as the 'ODBC Driver Name' when setting up the service monitor. (Likely it will be 'Oracle in instantclient_12_1' or 'Oracle in OraClient12Home1'). 
 
-6. Install the plugin and setup your monitors. Remember to change the 'ODBC Driver Name' value in the service monitor config to match the name of the driver as it shows up in the Data Sources (ODBC) utility. The curly Braces { } are important here.
+6. Update the Path Environment Variable to include the path to the oracle driver. Append ";C:\Oracle\instantclient_12_1" to end of the variable. To set this variable Go to System Properties > Advanced > Environment Variables > Under System variables find Path and edit it.
+
+7. Install the plugin and setup your monitors. Remember to change the 'ODBC Driver Name' value in the service monitor config to match the name of the driver as it shows up in the Data Sources (ODBC) utility. The curly Braces { } are important here.
 
 If your having trouble with installing just the Oracle InstantClient & ODBC , another option is to install these drivers as part of the 'Oracle Data Access Components' which is a bundle of Oracle drivers full fleged installer compared to the zips mentioned above. This bundle can be found on the Oracle website here: http://www.oracle.com/technetwork/database/windows/downloads/index.html 
 
