@@ -16,4 +16,4 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/oracle/12.1/client64/lib/
 
 
 
-/usr/local/uptime/apache/bin/php $UPTIMEDIR/plugins/scripts/MonitorOracleTablespaceCheck/php_oracle_tablespace.php
+/usr/local/uptime/apache/bin/php php_oracle_tablespace.php
