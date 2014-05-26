@@ -6,29 +6,19 @@ See http://uptimesoftware.github.io for more information.
  plugin   database   oracle  
 
 ### Category
-
 database
 
 ### Version Compatibility
-
+* Oracle Advanced Tablespace Check 4.2 - 7.3
 * Oracle Advanced Tablespace Check 4.1 - 7.2
-
-  
 * Oracle Advanced Tablespace Check 3.0 - 7.1, 7.0
-  
-
-  
 * Oracle Advanced Tablespace Check 2.0 - 6.0
-  
-
 
 ### Description
 Allows for better monitoring of Oracle tablespaces.
 
-
 ### Supported Monitoring Stations
-
-7.2, 7.1
+7.3, 7.2, 7.1
 
 ### Supported Agents
 None; no agent required
@@ -36,10 +26,9 @@ None; no agent required
 ### Installation Notes
 <p><a href="https://github.com/uptimesoftware/uptime-plugin-manager">Install using the up.time Plugin Manager</a></p>
 
-<h1>Oracle Client Driver Installation</h1>
+#### Oracle Client Driver Installation
 
-Windows
--------
+##### Windows
 
 1. Install the Oracle Instant Client drivers or have the Oracle Client installed on the monitoring station.
    To get the Instant Client Download for Oracle, download the 64 bit drive:
@@ -62,8 +51,7 @@ Windows
 
 If your having trouble with installing just the Oracle InstantClient & ODBC , another option is to install these drivers as part of the 'Oracle Data Access Components' which is a bundle of Oracle drivers full fleged installer compared to the zips mentioned above. This bundle can be found on the Oracle website here: http://www.oracle.com/technetwork/database/windows/downloads/index.html 
 
-Linux
------
+##### Linux
 (These steps refer to the .rpm versions of the various Oracle drivers, but they also provide .zip versions that can be installed on SUSE)
 
 1. Install unixODBC via your package manager (ie. yum install unixodbc) . This will install unixODBC into your '/usr/lib64/' directory.
@@ -77,35 +65,21 @@ Linux
 5. Edit the oracle_tablespace_check.sh script that should be located in the <uptime_dir>/scripts/MonitorOracleTablespaceCheck/ directory and confirm that the LD_LIBRARY_PATH environment variable matches the location where the Oracle Drivers were  installed in step #2 above.
 
 
-
 ### Dependencies
-
- * Oracle InstantClient & ODBC Drivers see readme for install steps
+* Oracle InstantClient & ODBC Drivers see readme for install steps
 
 
 ### Input Variables
-
 * ODBC Driver - This can either be the path to the driver itself or the name of the ODBC driver.
-
 * Oracle DB Port
-
 * Oracle Username
-
 * Oracle User Password
 
 ### Output Variables
-
-
 * Available Space (KB)
-
 * Used Space (KB)
-
 * Free Space (KB)
-
 * Percent Free (pct) 
 
-
 ### Languages Used
-
 * PHP
-
