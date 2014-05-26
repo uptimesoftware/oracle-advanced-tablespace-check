@@ -26,9 +26,9 @@ None; no agent required
 ### Installation Notes
 <p><a href="https://github.com/uptimesoftware/uptime-plugin-manager">Install using the up.time Plugin Manager</a></p>
 
-#### Oracle Client Driver Installation
+<h4>Oracle Client Driver Installation</h4>
 
-##### Windows
+<h5>Windows</h5>
 
 1. Install the Oracle Instant Client drivers or have the Oracle Client installed on the monitoring station.
    To get the Instant Client Download for Oracle, download the 64 bit drive:
@@ -51,7 +51,7 @@ None; no agent required
 
 If your having trouble with installing just the Oracle InstantClient & ODBC , another option is to install these drivers as part of the 'Oracle Data Access Components' which is a bundle of Oracle drivers full fleged installer compared to the zips mentioned above. This bundle can be found on the Oracle website here: http://www.oracle.com/technetwork/database/windows/downloads/index.html 
 
-##### Linux
+<h5>Linux</h5>
 (These steps refer to the .rpm versions of the various Oracle drivers, but they also provide .zip versions that can be installed on SUSE)
 
 1. Install unixODBC via your package manager (ie. yum install unixodbc) . This will install unixODBC into your '/usr/lib64/' directory.
